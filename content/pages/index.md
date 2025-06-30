@@ -99,42 +99,43 @@ sections:
     form:
       type: FormBlock
       elementId: sign-up-form
+      name: sign-up-contact
       data-netlify: true
+      method: POST
       fields:
+        - name: sign-up-contact
+          type: hidden
+          value: sign-up-contact
         - name: firstName
           label: First Name
           hideLabel: true
           placeholder: First Name
           isRequired: true
           width: 1/2
-          type: TextFormControl
+          type: text
         - name: lastName
           label: Last Name
           hideLabel: true
           placeholder: Last Name
           isRequired: false
           width: 1/2
-          type: TextFormControl
+          type: text
         - name: email
           label: Email
           hideLabel: true
           placeholder: Email
           isRequired: true
           width: 1/2
-          type: EmailFormControl
+          type: email
+          id: email
         - name: address
           label: Address
           hideLabel: true
           placeholder: Address
           isRequired: true
           width: 1/2
-          type: TextFormControl
-        - name: updatesConsent
-          label: Sign me up to recieve updates
-          isRequired: false
-          width: full
-          type: CheckboxFormControl
-      submitLabel: "Submit \U0001F680"
+          type: text
+      submitLabel: 'Submit'
       styles:
         self:
           textAlign: center
